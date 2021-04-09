@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: The First Run
     steps:
+    - uses: actions/checkout@v2
     - name: Just do it
       run: ant -noinput -buildfile build.xml compile jar run
 
