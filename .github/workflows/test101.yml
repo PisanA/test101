@@ -9,7 +9,7 @@ jobs:
     name: The First Run
     steps:
     - name: Just do it
-      run: pwd; ant -buildfile ../../build.xml compile jar run
+      run: pwd; ls -l; echo "higher"; ls -l ..; ant -buildfile ../build.xml compile jar run
 
 
 
