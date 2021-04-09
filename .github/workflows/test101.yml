@@ -9,8 +9,17 @@ jobs:
     name: The First Run
     steps:
     - uses: actions/checkout@v2
+    - uses: dbelyaev/action-checkstyle@v0.1.1
     - name: Just do it
-      run: ./testme.sh
+    with:
+          github_token: ${{ secrets.github_token }}
+          # Change reviewdog reporter if you need [github-pr-check, github-check, github-pr-review].
+          reporter: github-check
+          # Change reporter level if you need [info,warning,error].
+          # GitHub Status Check won't become failure with a warning.
+          level: warning
+          workdir: .
+          run: ./testme.sh
 
 
 
