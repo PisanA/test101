@@ -1,0 +1,13 @@
+
+name: Test101
+
+on: [push]
+
+jobs:
+  myfirstrun:
+    name: The First Run
+    steps:
+    - name: Just do it
+      run: ls -al; uname -a; cat /proc/meminfo
+
+
