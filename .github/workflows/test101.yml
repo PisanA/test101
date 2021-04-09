@@ -9,7 +9,7 @@ jobs:
     name: The First Run
     steps:
     - name: Just do it
-      run: pwd; ls -al; echo "higher"; ls -al ../; echo "ecen higher"; ls -al ../../ ; ant -noinput -buildfile ../build.xml compile jar run
+      run: ant -noinput -buildfile build.xml compile jar run
 
 
 
