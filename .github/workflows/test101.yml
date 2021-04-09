@@ -5,6 +5,7 @@ on: [push]
 
 jobs:
   myfirstrun:
+    runs-on: ubuntu-latest
     name: The First Run
     steps:
     - name: Just do it
