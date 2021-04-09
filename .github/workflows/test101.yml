@@ -9,6 +9,7 @@ jobs:
     name: The First Run
     steps:
     - name: Just do it
-      run: ls -al; uname -a; cat /proc/meminfo
+      run: ant compile jar run
+      
 
 
