@@ -9,7 +9,7 @@ jobs:
     name: The First Run
     steps:
     - name: Just do it
-      run: ant compile jar run
-      
+      run: pwd; ant -buildfile ../../build.xml compile jar run
+
 
 
