@@ -9,15 +9,13 @@ jobs:
     name: The First Run
     steps:
     - uses: actions/checkout@v2
-    - uses: dbelyaev/action-checkstyle@v0.1.1
     - name: Just do it
-    run: ./testme.sh
+      run: ./testme.sh
 
   myfirstcheckstyle:
     runs-on: ubuntu-latest
     - uses: actions/checkout@v2
     - uses: dbelyaev/action-checkstyle@v0.1.1
-    - name: Just do it
     with:
           github_token: ${{ secrets.github_token }}
           # Change reviewdog reporter if you need [github-pr-check, github-check, github-pr-review].
