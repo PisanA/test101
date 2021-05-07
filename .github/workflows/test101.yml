@@ -34,7 +34,8 @@ jobs:
         run: |
           git clone https://github.com/checkstyle/checkstyle.git
           cd checkstyle
-          mvn clean compile 
-          mvn clean package -Passembly
-          java -jar target/checkstyle-X.X-SNAPSHOT-all.jar -c /sun_checks.xml ~/Example.java
+          mvn clean compile > /dev/null
+          mvn clean package -Passembly > /dev/null
+          unzip -l *.zip
+          java -jar target/checkstyle-8.43-SNAPSHOT-all.jar -c /sun_checks.xml ~/Example.java
         
