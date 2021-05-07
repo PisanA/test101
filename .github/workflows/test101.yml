@@ -33,4 +33,9 @@ jobs:
       - name: Just do it
         run: |
           which checkstyle
+          git clone https://github.com/checkstyle/checkstyle.git
+          cd checkstyle
+          mvn clean compile 
+          mvn clean package -Passembly
+          java -jar target/checkstyle-X.X-SNAPSHOT-all.jar -c /sun_checks.xml ~/Example.java
         
