@@ -25,5 +25,13 @@ jobs:
           # GitHub Status Check won't become failure with a warning.
           level: warning
           workdir: .
-
+  yetanotherusingscript:
+    runs-on: ubuntu-latest
+    name: Yet Another
+    steps:
+      - uses: actions/checkout@v2
+      - name: Just do it
+        run: |
+        which checkstyle
+        
 
